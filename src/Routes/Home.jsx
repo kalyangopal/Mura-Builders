@@ -4,6 +4,19 @@ import { motion } from "framer-motion";
 import homeimg from "../assets/images/homeimg.jpg";
 
 const Home = () => {
+
+  // SCROLL FUNCTION
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
 
@@ -26,6 +39,7 @@ const Home = () => {
           transition={{ duration: 1 }}
           className="max-w-2xl"
         >
+
           {/* HEADING */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -73,27 +87,25 @@ const Home = () => {
 
           {/* BUTTON */}
           <motion.button
-           whileHover={{ scale: 1.05 }}
-             whileTap={{ scale: 0.95 }}
-             onClick={() => {
-            const section = document.getElementById("contact");
-            section?.scrollIntoView({ behavior: "smooth" });
-                 }}
-             className="
-                mt-10
-                bg-yellow-500
-               hover:bg-yellow-400
-                 text-black
-               font-bold
-                 px-8
-                 py-4
-                   rounded-xl
-                 transition
-                 duration-300
-                "
-            >
-          GET FREE CONSULTATION CALL
-        </motion.button>
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={scrollToContact}
+            className="
+              mt-10
+              bg-yellow-500
+              hover:bg-yellow-400
+              text-black
+              font-bold
+              px-8
+              py-4
+              rounded-xl
+              transition
+              duration-300
+            "
+          >
+            GET FREE CONSULTATION CALL
+          </motion.button>
+
         </motion.div>
       </div>
     </section>

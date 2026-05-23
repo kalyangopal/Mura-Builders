@@ -42,7 +42,7 @@ function Contact() {
 
     try {
 
-      // PASTE YOUR GOOGLE SCRIPT URL HERE
+      // GOOGLE APPS SCRIPT URL
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbyHBMg4Tx4XkV_QGfQhTjlJAPmZjVtVDwG-5kLFMTrw1mHMtGtq8owHdUt3IbGtauI/exec",
         {
@@ -52,6 +52,7 @@ function Contact() {
       );
 
       if (response.ok) {
+
         alert("Message Sent Successfully!");
 
         // CLEAR FORM
@@ -76,7 +77,12 @@ function Contact() {
   };
 
   return (
-    <section className="bg-[#1f1b1d] text-white py-20 overflow-hidden">
+
+    // IMPORTANT ID ADDED HERE
+    <section
+      id="contact"
+      className="bg-[#1f1b1d] text-white py-20 overflow-hidden"
+    >
 
       <div className="container mx-auto px-6 lg:px-20">
 
