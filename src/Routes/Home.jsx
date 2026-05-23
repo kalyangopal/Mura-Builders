@@ -75,7 +75,7 @@ const Home = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => (window.location.href = "/contact")}
+            onClick={() => (window.location.href = "/#contact")}
             className="
               mt-10
               bg-yellow-500
