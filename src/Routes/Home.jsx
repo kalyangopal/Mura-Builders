@@ -73,24 +73,27 @@ const Home = () => {
 
           {/* BUTTON */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => (window.location.href = "/#contact")}
-            className="
-              mt-10
-              bg-yellow-500
-              hover:bg-yellow-400
-              text-black
-              font-bold
-              px-8
-              py-4
-              rounded-xl
-              transition
-              duration-300
-            "
-          >
-            GET FREE CONSULTATION CALL
-          </motion.button>
+           whileHover={{ scale: 1.05 }}
+             whileTap={{ scale: 0.95 }}
+             onClick={() => {
+            const section = document.getElementById("contact");
+            section?.scrollIntoView({ behavior: "smooth" });
+                 }}
+             className="
+                mt-10
+                bg-yellow-500
+               hover:bg-yellow-400
+                 text-black
+               font-bold
+                 px-8
+                 py-4
+                   rounded-xl
+                 transition
+                 duration-300
+                "
+            >
+          GET FREE CONSULTATION CALL
+        </motion.button>
         </motion.div>
       </div>
     </section>
